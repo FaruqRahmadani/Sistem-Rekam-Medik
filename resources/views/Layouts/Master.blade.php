@@ -34,13 +34,15 @@
               </a>
             </li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown dropdown-list">
-              <a href="#" data-toggle="dropdown" data-toggle-state="offsidebar-open" data-no-persist="true">
-                <em class="fa fa-user"></em>
-              </a>
-            </li>
-          </ul>
+          @if (Auth::User())
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown dropdown-list">
+                <a href="#" data-toggle="dropdown" data-toggle-state="offsidebar-open" data-no-persist="true">
+                  <em class="fa fa-user"></em>
+                </a>
+              </li>
+            </ul>
+          @endif
         </div>
       </nav>
     </header>
@@ -48,54 +50,64 @@
       <div class="aside-inner">
         <nav class="sidebar" data-sidebar-anyclick-close="">
           <ul class="nav">
-            <li>
-              <a href="/">
-                <em class="icon-grid"></em>
-                <span>Dashboard</span>
-              </a>
-            </li>
+            @if (Auth::User())
+              <li>
+                <a href="/">
+                  <em class="icon-grid"></em>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+            @else
+              <li>
+                <a href="{{Route('LoginForm')}}">
+                  <em class="icon-login"></em>
+                  <span>Login</span>
+                </a>
+              </li>
+            @endif
           </ul>
         </nav>
       </div>
     </aside>
-    <aside class="offsidebar hide">
-      <nav>
-        <div role="tabpanel">
-          <div class="tab-content">
-            <div class="tab-pane fade in active" id="app-chat" role="tabpanel">
-              <li class="has-user-block">
-                <div id="user-block">
-                  <div class="item user-block">
-                    <div class="user-block-picture">
-                      <div class="user-block-status">
-                        <img class="img-thumbnail img-circle" src="{{asset('img/user/default.png')}}" alt="Avatar" width="60" height="60">
-                        <div class="circle circle-success circle-lg"></div>
+    @if (Auth::User())
+      <aside class="offsidebar hide">
+        <nav>
+          <div role="tabpanel">
+            <div class="tab-content">
+              <div class="tab-pane fade in active" id="app-chat" role="tabpanel">
+                <li class="has-user-block">
+                  <div id="user-block">
+                    <div class="item user-block">
+                      <div class="user-block-picture">
+                        <div class="user-block-status">
+                          <img class="img-thumbnail img-circle" src="{{asset('img/user/'.Auth::User()->foto)}}" alt="Avatar" width="60" height="60">
+                        </div>
+                      </div>
+                      <div class="user-block-info">
+                        <span class="user-block-name">{{Auth::User()->nama}}</span>
+                        <span class="user-block-role">{{Auth::User()->username}}</span>
                       </div>
                     </div>
-                    <div class="user-block-info">
-                      <span class="user-block-name">#######</span>
-                      <span class="user-block-role">#######</span>
-                    </div>
                   </div>
-                </div>
-              </li>
-              <hr class="no-margin">
-              <ul class="nav">
-                <li class="nav-item">
-                  <a class="media-box p mt0" href="#" id="logout">
-                    <span class="media-box-body">
-                      <span class="media-box-heading">
-                        <em class="fa fa-power-off"></em> Logout
-                      </span>
-                    </span>
-                  </a>
                 </li>
-              </ul>
+                <hr class="no-margin">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a class="media-box p mt0" href="#" id="logout">
+                      <span class="media-box-body">
+                        <span class="media-box-heading">
+                          <em class="fa fa-power-off"></em> Logout
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </aside>
+        </nav>
+      </aside>
+    @endif
     <section>
       <div id="app" class="content-wrapper">
         @yield('content')
