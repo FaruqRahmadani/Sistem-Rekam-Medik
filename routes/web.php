@@ -1,7 +1,7 @@
 <?php
 
-Route::GET('login', 'Auth\LoginController@showLoginForm')->name('LoginForm');
-Route::POST('login', 'Auth\LoginController@login')->name('Login');
+Route::GET('login', 'Auth\LoginController@showLoginForm')->name('Login');
+Route::POST('login', 'Auth\LoginController@login')->name('submitLogin');
 Route::GET('logout', 'Auth\LoginController@logout')->name('Logout');
 
 Route::group(['middleware' => ['AuthMiddleware']], function () {

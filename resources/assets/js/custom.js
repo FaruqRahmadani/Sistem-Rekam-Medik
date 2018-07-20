@@ -68,3 +68,12 @@ window.hapus = function(link, bisa=0){
     })
   }
 }
+
+window.notif = function (tipe, judul, pesan){
+  swal({
+    title: judul,
+    text: pesan,
+    icon: tipe,
+    button: "OK",
+  });
+}

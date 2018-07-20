@@ -70,7 +70,7 @@
               </li>
             @else
               <li>
-                <a href="{{Route('LoginForm')}}">
+                <a href="{{Route('Login')}}">
                   <em class="icon-login"></em>
                   <span>Login</span>
                 </a>

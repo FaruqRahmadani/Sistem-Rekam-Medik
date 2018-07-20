@@ -46401,6 +46401,15 @@ window.hapus = function (link) {
   }
 };
 
+window.notif = function (tipe, judul, pesan) {
+  __WEBPACK_IMPORTED_MODULE_0_sweetalert___default()({
+    title: judul,
+    text: pesan,
+    icon: tipe,
+    button: "OK"
+  });
+};
+
 /***/ }),
 /* 56 */
 /***/ (function(module, exports, __webpack_require__) {

@@ -19,6 +19,6 @@ class AuthMiddleware
     if (Auth::user()) {
       return $next($request);
     }
-    return redirect(Route('LoginForm'));
+    return redirect(Route('Login'));
   }
 }

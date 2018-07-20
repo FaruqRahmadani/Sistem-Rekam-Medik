@@ -9,7 +9,7 @@
             </h4>
           </div>
           <div class="panel-body">
-            <form class="mb-lg" role="form" data-parsley-validate="" novalidate="" method="POST" action="{{ route('Login') }}">
+            <form class="mb-lg" role="form" data-parsley-validate="" novalidate="" method="POST" action="{{ route('submitLogin') }}">
               @csrf
               <div class="form-group has-feedback">
                 <input class="form-control" id="exampleInputEmail1" type="text" placeholder="Username" autocomplete="off" name="username" required>
