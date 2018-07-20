@@ -19,5 +19,10 @@
         "lodash": "^4.17.4",
         "popper.js": "^1.12",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "ajv": "^6.5.2",
+        "browser-sync": "^2.24.5",
+        "sweetalert": "^2.1.0"
     }
 }

@@ -11,8 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+Route::group(['middleware' => ['AuthMiddleware']], function () {
+  Route::get('', function () {
     return view('Blank');
+  });
 });
 
 Route::GET('login', 'Auth\LoginController@showLoginForm')->name('LoginForm');

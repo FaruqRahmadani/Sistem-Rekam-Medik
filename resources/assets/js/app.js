@@ -22,3 +22,4 @@ require('./Angle2/vendor/screenfull/dist/screenfull');
 // require('./Angle2/vendor/datatables-responsive/js/responsive.bootstrap');
 // require('./Angle2/vendor/jquery-localize-i18n/dist/jquery.localize');
 require('./Angle2/app');
+require('./custom');

@@ -49,7 +49,7 @@
         <nav class="sidebar" data-sidebar-anyclick-close="">
           <ul class="nav">
             <li>
-              <a href="#">
+              <a href="/">
                 <em class="icon-grid"></em>
                 <span>Dashboard</span>
               </a>
