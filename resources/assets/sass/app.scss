@@ -1,14 +1,11 @@
-
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
-// Variables
-@import "variables";
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
+@import "Angle2/vendor/fontawesome/css/font-awesome.min";
+@import "Angle2/vendor/simple-line-icons/css/simple-line-icons";
+@import "Angle2/vendor/animate.css/animate.min";
+@import "Angle2/vendor/whirl/dist/whirl";
+@import "Angle2/vendor/datatables-colvis/css/dataTables.colVis";
+@import "Angle2/vendor/datatables/media/css/dataTables.bootstrap";
+@import "Angle2/vendor/dataTables.fontAwesome/index";
+@import "Angle2/bootstrap";
+@import "Angle2/app";
+@import "Angle2/theme";
+@import "custom";
