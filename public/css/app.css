@@ -26627,11 +26627,40 @@ body,
   border-bottom: 1px solid #e4eaec;
 }
 
+.nav-item a {
+  color: #34b292;
+}
+
+.nav-item a em {
+  margin-right: 5px;
+}
+
 .navbar-brand {
   color: white;
 }
 
 .navbar-brand .brand-logo {
   padding: 15px 10px !important;
+}
+
+.navbar-left .dropdown-list {
+  margin-left: 10px !important;
+}
+
+.navbar-left .dropdown-list h4 {
+  color: #2b957a;
+}
+
+.judul-route {
+  color: #2b957a !important;
+}
+
+.table {
+  white-space: nowrap;
+}
+
+.table .img-thumbnail {
+  width: 30px;
+  margin-right: 5px;
 }
 

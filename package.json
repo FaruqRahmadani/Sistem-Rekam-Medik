@@ -23,6 +23,9 @@
     "dependencies": {
         "ajv": "^6.5.2",
         "browser-sync": "^2.24.5",
+        "datatables.net": "^1.10.19",
+        "datatables.net-bs": "^1.10.19",
+        "datatables.net-responsive": "^2.2.3",
         "sweetalert": "^2.1.0"
     }
 }

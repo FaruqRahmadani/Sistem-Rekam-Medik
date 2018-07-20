@@ -34,6 +34,11 @@
               </a>
             </li>
           </ul>
+          <ul class="nav navbar-nav navbar-left visible-xs">
+            <li class="dropdown dropdown-list">
+              <h4>{{HRoute::Judul()}}</h4>
+            </li>
+          </ul>
           @if (Auth::User())
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown dropdown-list">
@@ -52,9 +57,15 @@
           <ul class="nav">
             @if (Auth::User())
               <li>
-                <a href="/">
+                <a href="{{Route('Dashboard')}}">
                   <em class="icon-grid"></em>
                   <span>Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{Route('Data-User')}}">
+                  <em class="icon-people"></em>
+                  <span>User</span>
                 </a>
               </li>
             @else
@@ -93,6 +104,15 @@
                 <hr class="no-margin">
                 <ul class="nav">
                   <li class="nav-item">
+                    <a class="media-box p mt0" href="{{Route('Edit-User', ['Id' => HCrypt::Encrypt(Auth::User()->id)])}}">
+                      <span class="media-box-body">
+                        <span class="media-box-heading">
+                          <em class="fa fa-gears"></em> Edit User
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
                     <a class="media-box p mt0" href="#" id="logout">
                       <span class="media-box-body">
                         <span class="media-box-heading">
@@ -110,6 +130,7 @@
     @endif
     <section>
       <div id="app" class="content-wrapper">
+        <h3 class="hidden-xs judul-route">{{HRoute::Judul()}}</h3>
         @yield('content')
       </div>
     </section>
