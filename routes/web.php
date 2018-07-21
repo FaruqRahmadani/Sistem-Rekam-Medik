@@ -25,6 +25,21 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
     Route::GET('{id}/hapus', 'PoliController@Hapus')->name('Hapus-Poli');
   });
 
+  Route::prefix('pasien')->group(function () {
+    Route::GET('', 'PasienController@Data')->name('Data-Pasien');
+    Route::GET('tambah', 'PasienController@Tambah')->name('Tambah-Pasien');
+    Route::POST('tambah', 'PasienController@submitTambah')->name('submitTambah-Pasien');
+    Route::GET('{id}/edit', 'PasienController@Edit')->name('Edit-Pasien');
+    Route::POST('{id}/edit', 'PasienController@submitEdit')->name('submitEdit-Pasien');
+    Route::GET('{id}/hapus', 'PasienController@Hapus')->name('Hapus-Pasien');
+  });
+
+  Route::prefix('kunjungan')->group(function () {
+    Route::GET('{idPasien}', 'KunjunganController@Data')->name('Data-Kunjungan');
+    Route::GET('{idPasien}/tambah', 'KunjunganController@Tambah')->name('Tambah-Kunjungan');
+    Route::POST('{idPasien}/tambah', 'KunjunganController@submitTambah')->name('submitTambah-Kunjungan');
+  });
+
 });
 
 

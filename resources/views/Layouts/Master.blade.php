@@ -74,6 +74,12 @@
                   <span>Poli</span>
                 </a>
               </li>
+              <li>
+                <a href="{{Route('Data-Pasien')}}">
+                  <em class="icon-star"></em>
+                  <span>Pasien</span>
+                </a>
+              </li>
             @else
               <li>
                 <a href="{{Route('Login')}}">
