@@ -68,6 +68,12 @@
                   <span>User</span>
                 </a>
               </li>
+              <li>
+                <a href="{{Route('Data-Poli')}}">
+                  <em class="icon-map"></em>
+                  <span>Poli</span>
+                </a>
+              </li>
             @else
               <li>
                 <a href="{{Route('Login')}}">
