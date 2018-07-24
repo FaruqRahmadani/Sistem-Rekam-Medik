@@ -22,7 +22,8 @@
                   <th>Pekerjaan</th>
                   <th>Alamat</th>
                   <th>No. Telepon</th>
-                  <th>Action</th>
+                  <th>Jumlah Kunjungan</th>
+                  <th class="text-center">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -37,6 +38,14 @@
                     <td>{!!nl2br($DataPasien->alamat)!!}</td>
                     <td>{{$DataPasien->no_telepon}}</td>
                     <td>
+                      <span class="label label-green col-md-12">
+                        {{$DataPasien->Kunjungan->count()}}
+                      </span>
+                    </td>
+                    <td>
+                      <a href="{{Route('Data-Kunjungan', ['Id' => HCrypt::Encrypt($DataPasien->id)])}}" class="btn btn-oval btn-success btn-outline" type="button">
+                        Kunjungan
+                      </a>
                       <a href="{{Route('Edit-Pasien', ['Id' => HCrypt::Encrypt($DataPasien->id)])}}" class="btn btn-oval btn-info btn-outline" type="button">
                         Edit
                       </a>
@@ -47,10 +56,10 @@
                   </tr>
                 @endforeach
               </tbody>
-              </table>
-            </div>
+            </table>
           </div>
         </div>
       </div>
     </div>
-  @endsection
+  </div>
+@endsection

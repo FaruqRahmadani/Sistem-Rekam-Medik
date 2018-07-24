@@ -38,8 +38,22 @@ Route::group(['middleware' => ['AuthMiddleware']], function () {
     Route::GET('{idPasien}', 'KunjunganController@Data')->name('Data-Kunjungan');
     Route::GET('{idPasien}/tambah', 'KunjunganController@Tambah')->name('Tambah-Kunjungan');
     Route::POST('{idPasien}/tambah', 'KunjunganController@submitTambah')->name('submitTambah-Kunjungan');
+    Route::GET('{id}/edit', 'KunjunganController@Edit')->name('Edit-Kunjungan');
+    Route::POST('{id}/edit', 'KunjunganController@submitEdit')->name('submitEdit-Kunjungan');
+    Route::GET('{id}/hapus', 'KunjunganController@Hapus')->name('Hapus-Kunjungan');
   });
 
+  Route::prefix('rekam_medik')->group(function () {
+    Route::GET('statistik', 'RekamMedikController@Statistik')->name('Statistik-Rekam-Medik');
+    Route::prefix('data')->group(function () {
+      Route::GET('', 'RekamMedikController@Data')->name('Data-Penyimpanan-Rekam-Medik');
+      Route::GET('tambah', 'RekamMedikController@Tambah')->name('Tambah-Penyimpanan-Rekam-Medik');
+      Route::POST('tambah', 'RekamMedikController@submitTambah')->name('submitTambah-Penyimpanan-Rekam-Medik');
+      Route::GET('{id}/edit', 'RekamMedikController@Edit')->name('Edit-Penyimpanan-Rekam-Medik');
+      Route::POST('{id}/edit', 'RekamMedikController@submitEdit')->name('submitEdit-Penyimpanan-Rekam-Medik');
+      Route::GET('{id}/hapus', 'RekamMedikController@Hapus')->name('Hapus-Penyimpanan-Rekam-Medik');
+    });
+  });
 });
 
 

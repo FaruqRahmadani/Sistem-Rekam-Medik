@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>Aplikasi Rujukan Pasien</title>
+  <title>SI Rekam Medik</title>
   <link rel="stylesheet" href="{{asset('css/app.css')}}" id="maincss">
 </head>
 
@@ -79,6 +79,24 @@
                   <em class="icon-star"></em>
                   <span>Pasien</span>
                 </a>
+              </li>
+              <li>
+                <a href="#rm" data-toggle="collapse">
+                  <em class="icon-loop"></em>
+                  <span>Rekam Medik</span>
+                </a>
+                <ul class="nav sidebar-subnav collapse" id="rm">
+                  <li>
+                    <a href="{{Route('Statistik-Rekam-Medik')}}">
+                      <span>Statistik</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{Route('Data-Penyimpanan-Rekam-Medik')}}">
+                      <span>Penyimpanan</span>
+                    </a>
+                  </li>
+                </ul>
               </li>
             @else
               <li>

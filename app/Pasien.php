@@ -14,6 +14,10 @@ class Pasien extends Model
     'no_rm', 'nik', 'nama', 'tempat_lahir', 'tanggal_lahir', 'jenis_kelamin', 'pekerjaan', 'agama', 'alamat', 'no_telepon'
   ];
 
+  public function Kunjungan(){
+    return $this->hasMany('App\Kunjungan');
+  }
+
   public function getUmurAttribute(){
     $Lahir = $this->tanggal_lahir;
     $Umur = Carbon::now()->diffInYears($Lahir);
@@ -48,6 +52,30 @@ class Pasien extends Model
         break;
       case 4:
         $Return = 'Pelajar/Mahasiswa';
+        break;
+      default:
+        $Return = 'What ur job?';
+        break;
+    }
+    return $Return;
+  }
+
+  public function getAgamaTextAttribute(){
+    switch ($this->agama) {
+      case 1:
+        $Return = 'Islam';
+        break;
+      case 2:
+        $Return = 'Katolik';
+        break;
+      case 3:
+        $Return = 'Protestan';
+        break;
+      case 4:
+        $Return = 'Buddha';
+        break;
+      case 5:
+        $Return = 'Hindu';
         break;
       default:
         $Return = 'What ur job?';

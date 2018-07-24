@@ -210,6 +210,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'HRoute' => App\Helpers\RouteHelper::class,
         'HCrypt' => App\Helpers\CryptHelper::class,
+        'HTanggal' => App\Helpers\TanggalHelper::class,
 
     ],
 

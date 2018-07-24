@@ -23,7 +23,7 @@ class PasienController extends Controller
     $Pasien->fill($request->all());
     $Pasien->save();
 
-    dd('Redirect ke Kunjungan!!!');
+    return redirect()->Route('Tambah-Kunjungan', ['Id' => HCrypt::Encrypt($Pasien->id)]);
   }
 
   public function Edit($Id){
@@ -48,9 +48,5 @@ class PasienController extends Controller
     $Pasien->delete();
 
     return redirect()->Route('Data-Pasien')->with(['alert' => true, 'tipe' => 'success', 'judul' => 'Berhasil', 'pesan' => 'Data Dihapus']);
-  }
-
-  public function Kunjungan(){
-    return view('Kunjungan.Tambah');
   }
 }
