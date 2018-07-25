@@ -25,9 +25,9 @@
               </div>
             </div>
             <div class="form-group">
-              <label class="col-sm-2 control-label">Tinggi (cm)</label>
+              <label class="col-sm-2 control-label">Baris</label>
               <div class="col-sm-10">
-                <input class="form-control" type="number" placeholder="Tinggi" name="tinggi" min="0" step="0.1" required value="{{$Rak->tinggi}}">
+                <input class="form-control" type="number" placeholder="Baris" name="baris" min="1" required value="{{$Rak->baris}}">
               </div>
             </div>
             <div class="form-group">

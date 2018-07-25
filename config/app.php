@@ -211,6 +211,7 @@ return [
         'HRoute' => App\Helpers\RouteHelper::class,
         'HCrypt' => App\Helpers\CryptHelper::class,
         'HTanggal' => App\Helpers\TanggalHelper::class,
+        'HStatistik' => App\Helpers\StatistikHelper::class,
 
     ],
 

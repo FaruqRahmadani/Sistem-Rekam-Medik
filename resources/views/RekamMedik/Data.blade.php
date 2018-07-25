@@ -16,7 +16,7 @@
                 <tr>
                   <th>#</th>
                   <th>Jumlah</th>
-                  <th>Tinggi (cm)</th>
+                  <th>Jumlah Baris</th>
                   <th>Lebar (cm)</th>
                   <th>Action</th>
                 </tr>
@@ -26,7 +26,7 @@
                   <tr>
                     <td>{{$Index+1}}</td>
                     <td>{{$DataRak->jumlah}}</td>
-                    <td>{{$DataRak->tinggi}}</td>
+                    <td>{{$DataRak->baris}}</td>
                     <td>{{$DataRak->lebar}}</td>
                     <td>
                       <a href="{{Route('Edit-Penyimpanan-Rekam-Medik', ['Id' => HCrypt::Encrypt($DataRak->id)])}}" class="btn btn-oval btn-info btn-outline" type="button">
