@@ -12,7 +12,8 @@ class RekamMedikController extends Controller
 {
   public function Statistik(){
     $Kunjungan = Kunjungan::all();
-    return view('RekamMedik.Statistik', compact('Kunjungan'));
+    $Rak = Rak::all();
+    return view('RekamMedik.Statistik', compact('Kunjungan', 'Rak'));
   }
 
   public function Data(){
