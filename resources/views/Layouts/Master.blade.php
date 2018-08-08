@@ -7,6 +7,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>SI Rekam Medik</title>
   <link rel="stylesheet" href="{{asset('css/app.css')}}" id="maincss">
+  <link rel="icon" href="{{asset('img/logo/logo.png')}}" type="image/gif">
 </head>
 
 <body>
@@ -16,10 +17,10 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="#">
             <div class="brand-logo">
-              <p>SI Rekam Medik</p>
+              <p><img src="{{asset('img/logo/logo.png')}}" alt=""> SIRM Ruang Filling</p>
             </div>
             <div class="brand-logo-collapsed">
-              <p>SI-REM</p>
+              <img src="{{asset('img/logo/logo.png')}}" alt="">
             </div>
           </a>
         </div>

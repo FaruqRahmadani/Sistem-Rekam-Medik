@@ -15,7 +15,17 @@
 .navbar-brand{
   color: white;
   .brand-logo{
-    padding: 15px 10px !important;
+    padding: 5px 10px !important;
+    p{
+      img{
+        width: 35px;
+      }
+    }
+  }
+  .brand-logo-collapsed{
+    img{
+      width: 40px !important;
+    }
   }
 }
 
