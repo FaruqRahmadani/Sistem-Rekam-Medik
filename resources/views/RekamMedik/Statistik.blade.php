@@ -44,7 +44,7 @@
                             <em class="icon-paper-plane fa-3x"></em>
                           </div>
                           <div class="col-xs-8 pv-lg">
-                            <div class="h2 mt0">{{number_format($Kunjungan->count()/HStatistik::DiffDate('d'),2)}}
+                            <div class="h2 mt0">{{number_format($Kunjungan->count()/HStatistik::DiffDate('d'),0)}}
                             </div>
                             <div>Perhari</div>
                           </div>
@@ -58,7 +58,7 @@
                             <em class="icon-paper-plane fa-3x"></em>
                           </div>
                           <div class="col-xs-8 pv-lg">
-                            <div class="h2 mt0">{{number_format($Kunjungan->count()/(HStatistik::DiffDate('m')+1),2)}}
+                            <div class="h2 mt0">{{number_format($Kunjungan->count()/(HStatistik::DiffDate('m')+1),0)}}
                             </div>
                             <div>Perbulan</div>
                           </div>
@@ -72,7 +72,7 @@
                             <em class="icon-paper-plane fa-3x"></em>
                           </div>
                           <div class="col-xs-8 pv-lg">
-                            <div class="h2 mt0">{{number_format($Kunjungan->count()/(HStatistik::DiffDate('y')+1),2)}}
+                            <div class="h2 mt0">{{number_format($Kunjungan->count()/(HStatistik::DiffDate('y')+1),0)}}
                             </div>
                             <div>Pertahun</div>
                           </div>
