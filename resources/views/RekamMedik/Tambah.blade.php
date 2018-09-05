@@ -4,13 +4,13 @@
     <div class="col-lg-12">
       <div class="panel">
         <div class="panel-heading">
-          <a href="{{Route('Data-Penyimpanan-Rekam-Medik')}}" class="btn btn-oval btn-success" type="button">
+          <a href="{{Route('Data-Penyimpanan-Rekam-Medis')}}" class="btn btn-oval btn-success" type="button">
             Kembali
           </a>
         </div>
         <hr class="no-margin">
         <div class="panel-body">
-          <form class="form-horizontal row-border" action="{{ Route('submitTambah-Penyimpanan-Rekam-Medik') }}" method="POST" enctype="multipart/form-data">
+          <form class="form-horizontal row-border" action="{{ Route('submitTambah-Penyimpanan-Rekam-Medis') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
               <label class="col-sm-2 control-label">Jumlah</label>

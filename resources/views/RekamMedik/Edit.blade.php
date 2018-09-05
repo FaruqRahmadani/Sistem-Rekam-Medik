@@ -10,7 +10,7 @@
         </div>
         <hr class="no-margin">
         <div class="panel-body">
-          <form class="form-horizontal row-border" action="{{ Route('submitEdit-Penyimpanan-Rekam-Medik', ['Id' => HCrypt::Encrypt($Rak->id)]) }}" method="POST" enctype="multipart/form-data">
+          <form class="form-horizontal row-border" action="{{ Route('submitEdit-Penyimpanan-Rekam-Medis', ['Id' => HCrypt::Encrypt($Rak->id)]) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
               <label class="col-sm-2 control-label">Jumlah</label>

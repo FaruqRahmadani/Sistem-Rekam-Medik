@@ -4,7 +4,7 @@
     <div class="col-lg-12">
       <div class="panel">
         <div class="panel-heading">
-          <a href="{{Route('Tambah-Penyimpanan-Rekam-Medik')}}" class="btn btn-oval btn-success" type="button">
+          <a href="{{Route('Tambah-Penyimpanan-Rekam-Medis')}}" class="btn btn-oval btn-success" type="button">
             Tambah
           </a>
         </div>
@@ -29,10 +29,10 @@
                     <td>{{$DataRak->baris}}</td>
                     <td>{{$DataRak->lebar}}</td>
                     <td>
-                      <a href="{{Route('Edit-Penyimpanan-Rekam-Medik', ['Id' => HCrypt::Encrypt($DataRak->id)])}}" class="btn btn-oval btn-info btn-outline" type="button">
+                      <a href="{{Route('Edit-Penyimpanan-Rekam-Medis', ['Id' => HCrypt::Encrypt($DataRak->id)])}}" class="btn btn-oval btn-info btn-outline" type="button">
                         Edit
                       </a>
-                      <button class="btn btn-oval btn-warning btn-outline" type="button" onclick="hapus('{{Route('Hapus-Penyimpanan-Rekam-Medik', ['Id' => HCrypt::Encrypt($DataRak->id)])}}')">
+                      <button class="btn btn-oval btn-warning btn-outline" type="button" onclick="hapus('{{Route('Hapus-Penyimpanan-Rekam-Medis', ['Id' => HCrypt::Encrypt($DataRak->id)])}}')">
                         Hapus
                       </button>
                     </td>

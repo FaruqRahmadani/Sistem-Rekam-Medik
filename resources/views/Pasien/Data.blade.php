@@ -15,7 +15,7 @@
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>No. Rekam Medik</th>
+                  <th>No. Rekam Medis</th>
                   <th>Nama</th>
                   <th>Umur</th>
                   <th>Jenis Kelamin</th>

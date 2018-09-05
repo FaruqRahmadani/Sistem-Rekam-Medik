@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>SI Rekam Medik</title>
+  <title>SI Rekam Medis</title>
   <link rel="stylesheet" href="{{asset('css/app.css')}}" id="maincss">
   <link rel="icon" href="{{asset('img/logo/logo.png')}}" type="image/gif">
 </head>
@@ -84,16 +84,16 @@
               <li>
                 <a href="#rm" data-toggle="collapse">
                   <em class="icon-loop"></em>
-                  <span>Rekam Medik</span>
+                  <span>Rekam Medis</span>
                 </a>
                 <ul class="nav sidebar-subnav collapse" id="rm">
                   <li>
-                    <a href="{{Route('Statistik-Rekam-Medik')}}">
+                    <a href="{{Route('Statistik-Rekam-Medis')}}">
                       <span>Statistik</span>
                     </a>
                   </li>
                   <li>
-                    <a href="{{Route('Data-Penyimpanan-Rekam-Medik')}}">
+                    <a href="{{Route('Data-Penyimpanan-Rekam-Medis')}}">
                       <span>Penyimpanan</span>
                     </a>
                   </li>

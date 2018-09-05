@@ -13,9 +13,9 @@
           <form class="form-horizontal row-border" action="{{ Route('submitEdit-Pasien', ['Id' => HCrypt::Encrypt($Pasien->id)]) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-              <label class="col-sm-2 control-label">No. Rekam Medik</label>
+              <label class="col-sm-2 control-label">No. Rekam Medis</label>
               <div class="col-sm-10">
-                <input class="form-control" type="text" placeholder="Nomor Rekam Medik" name="no_rm" required value="{{$Pasien->no_rm}}">
+                <input class="form-control" type="text" placeholder="Nomor Rekam Medis" name="no_rm" required value="{{$Pasien->no_rm}}">
               </div>
             </div>
             <div class="form-group">

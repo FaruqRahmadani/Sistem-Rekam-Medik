@@ -12,7 +12,7 @@
           <div class="panel-body">
             <table class="table table-hover">
               <tr>
-                <td>Nomor Rekam Medik</td>
+                <td>Nomor Rekam Medis</td>
                 <td>{{$Pasien->no_rm}}</td>
               </tr>
               <tr>

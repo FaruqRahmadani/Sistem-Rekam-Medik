@@ -30,7 +30,7 @@ class RekamMedikController extends Controller
     $Rak->fill($request->all());
     $Rak->save();
 
-    return redirect()->Route('Data-Penyimpanan-Rekam-Medik')->with(['alert' => true, 'tipe' => 'success', 'judul' => 'Berhasil', 'pesan' => 'Data Tersimpan']);
+    return redirect()->Route('Data-Penyimpanan-Rekam-Medis')->with(['alert' => true, 'tipe' => 'success', 'judul' => 'Berhasil', 'pesan' => 'Data Tersimpan']);
   }
 
   public function Edit($Id){
@@ -46,7 +46,7 @@ class RekamMedikController extends Controller
     $Rak->fill($request->all());
     $Rak->save();
 
-    return redirect()->Route('Data-Penyimpanan-Rekam-Medik')->with(['alert' => true, 'tipe' => 'success', 'judul' => 'Berhasil', 'pesan' => 'Data Diedit']);
+    return redirect()->Route('Data-Penyimpanan-Rekam-Medis')->with(['alert' => true, 'tipe' => 'success', 'judul' => 'Berhasil', 'pesan' => 'Data Diedit']);
   }
 
   public function Hapus($Id){
@@ -54,6 +54,6 @@ class RekamMedikController extends Controller
     $Rak = Rak::findOrFail($Id);
     $Rak->delete();
 
-    return redirect()->Route('Data-Penyimpanan-Rekam-Medik')->with(['alert' => true, 'tipe' => 'success', 'judul' => 'Berhasil', 'pesan' => 'Data Dihapus']);
+    return redirect()->Route('Data-Penyimpanan-Rekam-Medis')->with(['alert' => true, 'tipe' => 'success', 'judul' => 'Berhasil', 'pesan' => 'Data Dihapus']);
   }
 }
